@@ -1,11 +1,15 @@
 from google import genai
 from google.genai import types
+
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 
 def analyze_resume_with_gemini(resume_text, job_description):
 
-    client = genai.Client(api_key="AIzaSyD2SHuCa4AJicM_P5EE9m2r99WjIPbzQtQ")
+    client = genai.Client(api_key=os.getenv('api_key'))
 
     prompt = f"""
     You are an advanced ATS (Applicant Tracking System) and professional technical recruiter.
