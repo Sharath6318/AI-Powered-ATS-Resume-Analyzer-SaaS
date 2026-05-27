@@ -1,0 +1,146 @@
+### Api call for create user
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "riya",
+    "email" : "riya12@gamil.com",
+    "password" : "password@123"
+} 
+
+### Api call for list users
+GET http://127.0.0.1:8000/register/
+Accept: application/json
+
+### API call for Retrive user
+GET http://127.0.0.1:8000/register/3
+Accept: application/json
+
+
+### Api call for token
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username" : "raju12@gmail.com",
+    "password" : "password@12"
+}
+
+### Api call for Current user
+GET http://127.0.0.1:8000/Me/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxNTM4MzYwLCJpYXQiOjE3Nzg5NDYzNjAsImp0aSI6IjMwNzY2MzQ3NjEwOTQ1YzNhNGY1NjM3NjJiYjA0ZmFiIiwidXNlcl9pZCI6IjEifQ.vE_gut_ArdoJvr5xs2y1lQZ2aUf2kew7-Efy8ui_1Sg
+
+### Api call for create organization
+POST http://127.0.0.1:8000/organization/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5Mjg0MDA2LCJpYXQiOjE3NzY2OTIwMDYsImp0aSI6IjQ3M2ExNzM0MDY0OTRmNThiZDVjMDI5ZGVmZmRmNGNkIiwidXNlcl9pZCI6IjIifQ.0ofi_Db37caG5iP_vW7v6GEI3ZiuQlVLIcZNvVV-OgY
+
+{
+
+}
+
+### Api call for list Organization
+GET http://127.0.0.1:8000/organization/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5Mjg0MDA2LCJpYXQiOjE3NzY2OTIwMDYsImp0aSI6IjQ3M2ExNzM0MDY0OTRmNThiZDVjMDI5ZGVmZmRmNGNkIiwidXNlcl9pZCI6IjIifQ.0ofi_Db37caG5iP_vW7v6GEI3ZiuQlVLIcZNvVV-OgY
+
+### APi call for Get Resume 
+GET http://127.0.0.1:8000/resume/
+Accept : application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+### api call for Delete Resume
+DELETE http://127.0.0.1:8000/resume/71/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+### Api call for create Resume Analyze
+POST http://127.0.0.1:8000/resume/4/analyze/
+Content-Type : application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+API CALL FOR RESUME ANALYZE
+###
+POST http://127.0.0.1:8000/resume/71/analyze/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+{
+  "job_description_id" : 5
+}
+
+### Api call for list analyze
+GET http://127.0.0.1:8000/resume-analyzes/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+### APi call for retrive resume analyze detail
+GET http://127.0.0.1:8000/resume/18/get-analyze/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+### Api call for Summary
+GET http://127.0.0.1:8000/resume-summary/ 
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+### APi call for create job description
+POST http://127.0.0.1:8000/job-description/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxNTIwNzM4LCJpYXQiOjE3Nzg5Mjg3MzgsImp0aSI6IjI2ZmVmYTU0NGEwOTQ4ZDJhYzc0YWRiNzNhZjEwODc3IiwidXNlcl9pZCI6IjEifQ.AEK1KHXWg45lUwpYFB6FNTPDc7qheVDeXYBOL47Baok
+
+{
+  "title": "Frontend Developer",
+  "company_name": "Tech Solutions Pvt Ltd",
+  "tags": "React, JavaScript, HTML, CSS",
+  "description": "We are looking for a frontend developer with experience in React and modern UI development."
+}
+
+### Api call for list jobDescription
+GET http://127.0.0.1:8000/job-description/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxNTIxNTY2LCJpYXQiOjE3Nzg5Mjk1NjYsImp0aSI6IjY5MjgxNzhkNTUyOTQ2NWI5NzI4ODBmOWM4MWZlMTA4IiwidXNlcl9pZCI6IjEifQ.pJGak0NyDuppQZZQtT1R_1h8kDpA2CC6rz-QUt7rvFE
+
+### Api call for Retrive Jobdescription
+GET http://127.0.0.1:8000/job-description/1/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+###API call for Update Jobdescription
+PUT http://127.0.0.1:8000/job-description/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+{
+  "title": "Frontend Developer",
+  "company_name": "Tech Solutions Pvt Ltd",
+  "tags": "React, JavaScript, HTML, CSS, TailWind",
+  "description": "We are looking for a frontend developer with experience in React and modern UI development."
+}
+
+### Api call for delete JOB description
+DELETE http://127.0.0.1:8000/job-description/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+###
+GET http://127.0.0.1:8000/all-sub/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyMzg1NzgwLCJpYXQiOjE3Nzk3OTM3ODAsImp0aSI6IjliOGUxYzA4YmI4NzRhOTlhNzFhNzM0OTgwZDRhYjE3IiwidXNlcl9pZCI6IjMifQ.3GXKTR_rPHFjkxpjlqr9v6fZQqaOdO1sykcE5pDeNjo
+
+# API CALL FOR LIST USAGES
+###
+GET http://127.0.0.1:8000/usages/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyNDA1NTU4LCJpYXQiOjE3Nzk4MTM1NTgsImp0aSI6IjNmNjhiNGZiNTUxMDQ3NzFiZGM0YzY0ZmZhZWJhZWYwIiwidXNlcl9pZCI6IjQifQ.OrdwqRjbUodsJh30WxvAspCexCr1IkjKUReBEpdSjpU
+
+
+### Api call for credits summary
+GET http://127.0.0.1:8000/credits-smry/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyNDczNTM1LCJpYXQiOjE3Nzk4ODE1MzUsImp0aSI6ImRhZmMzZjkzZmRhMDQwYjI5ZDFjMzVlNTg0ZDllNDQ5IiwidXNlcl9pZCI6IjUifQ.e9U0XNA3hu6Oq7Abkkg9TSBQAQnVhLf_0IKwUXnO9SE
+
+
+### Api call for plan list
+GET http://127.0.0.1:8000/get-plan/
+Accept: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyNDgyOTU5LCJpYXQiOjE3Nzk4OTA5NTksImp0aSI6Ijg4MmIxNWExNDgxNzRhMzdiZTVlMDYzZjgzMTE0MzczIiwidXNlcl9pZCI6IjYifQ.9CLDzs6SPbIdKtroY-3ok-rU5-QGC_1SLSoPahcq5ok

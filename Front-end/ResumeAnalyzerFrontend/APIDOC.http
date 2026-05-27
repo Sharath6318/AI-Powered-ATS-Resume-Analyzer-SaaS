@@ -1,0 +1,60 @@
+### Api call for create user
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "sharath",
+    "email" : "sharath12@gamil.com",
+    "password" : "password@123",
+    "credits" : 3,
+    "is_premium" : false
+}
+
+### Api call for list users
+GET http://127.0.0.1:8000/register/
+Accept: application/json
+
+### Api call for token
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username" : "",
+    "password" : ""
+}
+
+### Api call for create organization
+POST http://127.0.0.1:8000/organization/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5Mjg0MDA2LCJpYXQiOjE3NzY2OTIwMDYsImp0aSI6IjQ3M2ExNzM0MDY0OTRmNThiZDVjMDI5ZGVmZmRmNGNkIiwidXNlcl9pZCI6IjIifQ.0ofi_Db37caG5iP_vW7v6GEI3ZiuQlVLIcZNvVV-OgY
+
+{
+
+}
+
+### Api call for list Organization
+GET http://127.0.0.1:8000/organization/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5Mjg0MDA2LCJpYXQiOjE3NzY2OTIwMDYsImp0aSI6IjQ3M2ExNzM0MDY0OTRmNThiZDVjMDI5ZGVmZmRmNGNkIiwidXNlcl9pZCI6IjIifQ.0ofi_Db37caG5iP_vW7v6GEI3ZiuQlVLIcZNvVV-OgY
+
+### APi call for create Resume
+POST http://127.0.0.1:8000/resume/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+### Api call for create Resume Analyze
+POST http://127.0.0.1:8000/resume/3/analyze/
+Content-Type : application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+
+### Api call for list analyze
+GET http://127.0.0.1:8000/resume-analyze/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
+### APi call for retrive resume analyze detail
+GET http://127.0.0.1:8000/resume/18/get-analyze/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NzM1ODM5LCJpYXQiOjE3NzcxNDM4MzksImp0aSI6IjIyZWQwMzE3MzUwNzQ1ZDM4YmQ3YzJkZjI2MmVhNDFkIiwidXNlcl9pZCI6IjIifQ.ZfMMqlMlpbWLXtxtNyQY4eK9r-svdwN5YwOTOdRDjpE
+
