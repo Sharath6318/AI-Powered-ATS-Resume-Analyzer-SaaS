@@ -17,6 +17,8 @@ from dotenv import load_dotenv
 import os
 from pathlib import Path
 
+import dj_database_url
+
 
 load_dotenv()
 
@@ -97,6 +99,10 @@ DATABASES = {
         "HOST": os.getenv("DB_HOST"),
         "PORT": os.getenv("DB_PORT"),
     }
+}
+
+DATABASES = {
+    'default' : dj_database_url.parse(os.getenv('DATABASE_URL')) 
 }
 
 
