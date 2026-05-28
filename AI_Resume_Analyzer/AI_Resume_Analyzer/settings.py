@@ -93,16 +93,16 @@ WSGI_APPLICATION = "AI_Resume_Analyzer.wsgi.application"
 #     }
 # }
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'ai_resume_analyzer_saas',
-        "USER": 'postgres',
-        "PASSWORD": os.getenv("DB_PASSWORD"),
-        "HOST": 'localhost',
-        "PORT": '5432',
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": 'ai_resume_analyzer_saas',
+#         "USER": 'postgres',
+#         "PASSWORD": os.getenv("DB_PASSWORD"),
+#         "HOST": 'localhost',
+#         "PORT": '5432',
+#     }
+# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
