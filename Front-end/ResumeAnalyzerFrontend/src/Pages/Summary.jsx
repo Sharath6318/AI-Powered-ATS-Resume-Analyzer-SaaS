@@ -43,7 +43,7 @@ function Summary() {
                             </svg>
                         </div>
                     </div>
-                    <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{summary?.avilable_credits}</p>
+                    <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{summary?.avilable_credits?summary?.avilable_credits:0}</p>
                     {/* <p className="text-xs mt-1" style={{ color: 'var(--color-muted)' }}>out of 100 monthly</p> */}
                     {/* <div className="progress-bar-track mt-3">
                         <div className="progress-bar-fill" style={{ width: '42%' }}></div>
@@ -62,7 +62,7 @@ function Summary() {
                             </svg>
                         </div>
                     </div>
-                    <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{summary?.resume_count}</p>
+                    <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{summary?.resume_count?summary?.resume_count:0}</p>
                     <p className="text-xs mt-1" style={{ color: 'var(--color-muted)' }}>total resumes stored</p>
                     <p className="text-xs mt-3 font-medium" style={{ color: 'var(--color-indigo)' }}>↑ 2 added this week</p>
                 </div>
@@ -78,7 +78,7 @@ function Summary() {
                             </svg>
                         </div>
                     </div>
-                    <p className="text-3xl font-bold" style={{ fontFamily: "var(--font-display)" }}>{summary?.average_ats_score}<span className="text-lg font-normal" style={{ color: 'var(--color-muted)' }}>/100</span></p>
+                    <p className="text-3xl font-bold" style={{ fontFamily: "var(--font-display)" }}>{summary?.average_ats_score?summary?.average_ats_score:0}<span className="text-lg font-normal" style={{ color: 'var(--color-muted)' }}>/100</span></p>
                     <p className="text-xs mt-1" style={{ color: "var(--color-muted)" }}>across all analyses</p>
                     <p className="text-xs mt-3 font-medium" style={{ color: 'var(--color-teal)' }}>↑ +8 vs last month</p>
                 </div>
@@ -94,7 +94,7 @@ function Summary() {
                             </svg>
                         </div>
                     </div>
-                    <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{summary?.jobdescription_count}</p>
+                    <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{summary?.jobdescription_count?summary?.jobdescription_count:0}</p>
                     <p className="text-xs mt-1" style={{ color: 'var(--color-muted)' }}>saved job descriptions</p>
                     <p className="text-xs mt-3 font-medium" style={{ color: "var(--color-rose)" }}>1 added today</p>
                 </div>

@@ -30,8 +30,6 @@ function ListResumes({ jobDesc }) {
 
             }
 
-            Usage
-
         }
         catch (error) {
 

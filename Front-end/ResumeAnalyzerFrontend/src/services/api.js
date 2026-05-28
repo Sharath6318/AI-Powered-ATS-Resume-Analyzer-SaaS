@@ -1,64 +1,49 @@
 import axios from "axios";
+import axiosInstance from "./axiosinstance";
 
-var token = localStorage.getItem('token')
+// var token = localStorage.getItem('token')
 
-var BASE_URL = 'http://127.0.0.1:8000'
+// var BASE_URL = 'http://127.0.0.1:8000'
 
 export async function RegiserApi(data) {
 
-    let response = await axios.post(`${BASE_URL}/register/`, data)
+
+    let response = await axiosInstance.post(`/register/`, data)
 
     return response
 }
 
 export async function LoginApi(data) {
 
-    let response = await axios.post(`${BASE_URL}/token/`, data)
+    let response = await axiosInstance.post(`/token/`, data)
 
     return response
 }
 
 export async function GetUserApi() {
 
-    let headers = {
-        'Authorization': token
-    }
-
-    let response = await axios.get(`${BASE_URL}/Me/`, { headers })
+    let response = await axiosInstance.get(`/Me/`)
 
     return response
 }
 
 export async function RetriveAnalyzeResumeApi(resume_id) {
 
-    let headers = {
-        'Authorization': token
-    }
-
-    let response = await axios.get(`${BASE_URL}/resume/${resume_id}/`, { headers })
+    let response = await axiosInstance.get(`/resume/${resume_id}/`)
 
     return response
 }
 
 export async function ResumeAnalysesApi() {
 
-    let headers = {
-
-        'Authorization': token
-    }
-
-    let response = await axios.get(`${BASE_URL}/resume-analyzes/`, { headers })
+    let response = await axiosInstance.get(`/resume-analyzes/`)
 
     return response
 }
 
 export async function GetAllResumeApi() {
 
-    let headers = {
-        "Authorization": token
-    }
-
-    let response = await axios.get(`${BASE_URL}/resume-analyze/`, { headers })
+    let response = await axiosInstance.get(`/resume-analyze/`)
 
     return response
 }
@@ -66,12 +51,7 @@ export async function GetAllResumeApi() {
 
 export async function GetResumesAPi() {
 
-    let headers = {
-        "Accept": "application/json",
-        "Authorization": token
-    }
-
-    let response = await axios.get(`${BASE_URL}/resume/`, { headers })
+    let response = await axiosInstance.get(`/resume/`)
 
     return response
 }
@@ -85,35 +65,21 @@ export async function AnalyzeResumeAPi(id, jobDec) {
         return
     }
 
-
-    let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': token
-    }
-
-    let response = await axios.post(`${BASE_URL}/resume/${id}/analyze/`, { job_description_id: jobDec }, { headers })
+    let response = await axiosInstance.post(`/resume/${id}/analyze/`, { job_description_id: jobDec })
 
     return response
 }
 
 export async function AllAnalyzesApi() {
 
-    let headers = {
-        "Authorization": token
-    }
-
-    let response = await axios.get(`${BASE_URL}/resume-analyzes/`, { headers })
+    let response = await axiosInstance.get(`/resume-analyzes/`)
 
     return response
 }
 
 export async function GetResumeAnalyzeApi(resume_id) {
 
-    let headers = {
-        'Authorization': token
-    }
-
-    let response = await axios.get(`${BASE_URL}/resume/${resume_id}/`, { headers })
+    let response = await axiosInstance.get(`/resume/${resume_id}/`)
 
 
     return response
@@ -121,11 +87,8 @@ export async function GetResumeAnalyzeApi(resume_id) {
 
 export async function FileUploadAPi(file) {
 
-    let headers = {
-        "Authorization": token
-    }
 
-    let response = await axios.post(`${BASE_URL}/resume/`, file, { headers })
+    let response = await axiosInstance.post(`/resume/`, file)
 
     return response
 
@@ -133,23 +96,14 @@ export async function FileUploadAPi(file) {
 
 export async function SummaryAPi() {
 
-    let headers = {
-        'Authorization': token
-    }
-
-    let response = await axios.get(`${BASE_URL}/resume-summary/`, { headers })
+    let response = await axiosInstance.get(`/resume-summary/`)
 
     return response
 }
 
 export async function CreateJobDescriptionApi(data) {
 
-    let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': token
-    }
-
-    let response = await axios.post(`${BASE_URL}/job-description/`, data, { headers })
+    let response = await axiosInstance.post(`/job-description/`, data)
 
     return response
 
@@ -157,33 +111,21 @@ export async function CreateJobDescriptionApi(data) {
 
 export async function JobDescriptionlistApi() {
 
-    let headers = {
-        'Authorization': token
-    }
-
-    let response = await axios.get(`${BASE_URL}/job-description/`, { headers })
+    let response = await axiosInstance.get(`/job-description/`)
 
     return response
 }
 
 export async function GetJobDescriptionApi(desc_id) {
 
-    let headers = {
-        'Authorization': token
-    }
-
-    let response = await axios.get(`${BASE_URL}/job-description/${desc_id}/`, { headers })
+    let response = await axiosInstance.get(`/job-description/${desc_id}/`)
 
     return response
 }
 
 export async function DestroyJobDescriptionAPi(desc_id) {
 
-    let headers = {
-        'Authorization': token
-    }
-
-    let response = await axios.delete(`${BASE_URL}/job-description/${desc_id}/`, { headers })
+    let response = await axiosInstance.delete(`/job-description/${desc_id}/`)
 
     return response
 
@@ -191,13 +133,7 @@ export async function DestroyJobDescriptionAPi(desc_id) {
 
 export async function SubScriptionApi(price, plan) {
 
-
-    let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': token
-    }
-
-    const response = await axios.post(`${BASE_URL}/create-payment/`, { price: price }, { headers });
+    const response = await axiosInstance.post(`/create-payment/`, { price: price });
 
     return response
 }
@@ -205,24 +141,15 @@ export async function SubScriptionApi(price, plan) {
 // set plan for the particular user.....................
 export async function PaymentSucessAPi(plan) {
 
-    let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': token
-    }
-
-    const response = await axios.post(`${BASE_URL}/setplan/`, { plan: plan }, { headers });
+    const response = await axiosInstance.post(`/setplan/`, { plan: plan });
 
     return response
 
 }
 export async function UpdateSubscriptonAPi() {
 
-    let headers = {
-        'Content-Type': 'application/json',
-        'Authorization': token
-    }
 
-    let response = await axios.patch("http://127.0.0.1:8000/updatesubscription/", {}, { headers })
+    let response = await axiosInstance.patch("/updatesubscription/", {})
 
     return response
 }
@@ -230,48 +157,30 @@ export async function UpdateSubscriptonAPi() {
 
 export async function ListSubscriptonAPi() {
 
-    let headers = {
-        'Accept': 'application/json',
-        'Authorization': token
-    }
 
-    let response = await axios.get("http://127.0.0.1:8000/all-sub/", { headers })
+    let response = await axiosInstance.get("/all-sub/")
 
     return response
 }
 
 export async function UsageListApi() {
 
-    let headers = {
-        'Accept': 'application/json',
-        'Authorization': token
-    }
-
-    let response = await axios.get("http://127.0.0.1:8000/usages/", { headers })
+    let response = await axiosInstance.get("/usages/")
 
     return response
 }
 
 export async function CreditsSummaryApi() {
 
-    let headers = {
-        'Accept': 'application/json',
-        'Authorization': token
-    }
 
-    let response = await axios.get("http://127.0.0.1:8000/credits-smry/", { headers })
+    let response = await axiosInstance.get("/credits-smry/")
 
     return response
 }
 
 export async function RetrivePlanApi() {
 
-    let headers = {
-        'Accept': 'application/json',
-        'Authorization': token
-    }
-
-    let response = await axios.get("http://127.0.0.1:8000/get-plan/", { headers })
+    let response = await axiosInstance.get("/get-plan/")
 
     return response
 }

@@ -82,17 +82,17 @@ function Usage() {
                         <div class="grid grid-cols-4 gap-5">
                             <div class="stat-card">
                                 <p class="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: 'var(--color-muted)', letterSpacing: '.07em' }}>Total Credits</p>
-                                <p class="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{plan?.plan == "pro" ? c_summary?.remaining_credists + 100 : plan?.plan == "enterprise" ? c_summary?.remaining_credists + 500 : 3}</p>
+                                <p class="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{plan?.plan == "pro" ? c_summary?.remaining_credists + 100 : plan?.plan == "enterprise" ? c_summary?.remaining_credists + 500 :  plan?.plan == "free" ? 3 : 0}</p>
                                 <p class="text-xs mt-1" style={{ color: 'var(--color-muted)' }}>monthly allowance</p>
                             </div>
                             <div class="stat-card">
                                 <p class="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: 'var(--color-muted)', letterSpacing: '.07em' }}>Credits Used</p>
-                                <p class="text-3xl font-bold" style={{ fontFamily: 'var(--font-display);color:var(--color-amber-dk)' }}>{c_summary?.used_credits}</p>
+                                <p class="text-3xl font-bold" style={{ fontFamily: 'var(--font-display);color:var(--color-amber-dk)' }}>{c_summary?.used_credits?c_summary?.used_credits:0}</p>
                                 <p class="text-xs mt-1" style={{ color: 'var(--color-muted)' }}>this billing period</p>
                             </div>
                             <div class="stat-card">
                                 <p class="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: 'var(--color-muted)', letterSpacing: '.07em' }}>Credits Left</p>
-                                <p class="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-teal)' }}>{c_summary?.remaining_credists}</p>
+                                <p class="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-teal)' }}>{c_summary?.remaining_credists?c_summary?.remaining_credists:0}</p>
                                 <div class="progress-bar-track mt-2">
                                     <div class="progress-bar-fill" style={{
                                         width: `${(c_summary?.used_credits /
@@ -103,7 +103,7 @@ function Usage() {
                             </div>
                             <div class="stat-card">
                                 <p class="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: 'var(--color-muted)', letterSpacing: '.07em' }}>Total Actions</p>
-                                <p class="text-3xl font-bold">{c_summary?.total_action}</p>
+                                <p class="text-3xl font-bold">{c_summary?.total_action?c_summary?.total_action:0}</p>
                                 <p class="text-xs mt-1" style={{ color: 'var(--color-muted)' }}>actions this month</p>
                             </div>
                         </div>
