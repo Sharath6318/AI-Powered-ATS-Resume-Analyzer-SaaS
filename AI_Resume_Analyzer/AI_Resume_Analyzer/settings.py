@@ -34,7 +34,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -94,6 +94,7 @@ WSGI_APPLICATION = "AI_Resume_Analyzer.wsgi.application"
 # }
 
 # DATABASES = {
+
 #     "default": {
 #         "ENGINE": "django.db.backends.postgresql",
 #         "NAME": 'ai_resume_analyzer_saas',
@@ -104,28 +105,28 @@ WSGI_APPLICATION = "AI_Resume_Analyzer.wsgi.application"
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
-}
+
+# DATABASES = {
+#     'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
+# }
 
 
-# DATABASES = {"default": dj_database_url.parse(os.getenv("DATABASE_URL"))}
+if os.getenv("RENDER"):
 
-# if os.getenv("DATABASE_URL"):
+    DATABASES = {"default": dj_database_url.parse(os.getenv("DATABASE_URL"))}
 
-#     DATABASES = {"default": dj_database_url.parse(os.getenv("DATABASE_URL"))}
+else:
 
-# else:
-#     DATABASES = {
-#         "default": {
-#             "ENGINE": "django.db.backends.postgresql",
-#             "NAME": os.getenv("DB_NAME"),
-#             "USER": os.getenv("DB_USER"),
-#             "PASSWORD": os.getenv("DB_PASSWORD"),
-#             "HOST": os.getenv("DB_HOST"),
-#             "PORT": os.getenv("DB_PORT"),
-#         }
-#     }
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "ai_resume_analyzer_saas_db",
+            "USER": "postgres",
+            "PASSWORD": os.getenv("DB_PASSWORD"),
+            "HOST": "localhost",
+            "PORT": "5432",
+        }
+    }
 
 
 # Password validation

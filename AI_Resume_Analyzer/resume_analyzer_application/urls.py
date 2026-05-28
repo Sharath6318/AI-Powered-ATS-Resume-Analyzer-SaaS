@@ -27,7 +27,7 @@ router = DefaultRouter()
 
 router.register('register', views.RegisterView)
 router.register('organization', views.OrganizationView)
-router.register('resume', views.ResumesView)
+router.register('resume', views.ResumesView)#......................................
 # router.register('resume-analyze', views.ResuemAnalyzeView)
 router.register('job-description', views.JobDescriptionView)
 
