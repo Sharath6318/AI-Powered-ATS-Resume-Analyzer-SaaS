@@ -1,12 +1,11 @@
 import axios from "axios";
 import axiosInstance from "./axiosinstance";
 
-// var token = localStorage.getItem('token')
+var token = localStorage.getItem('token')
 
-// var BASE_URL = 'http://127.0.0.1:8000'
+var BASE_URL = 'http://127.0.0.1:8000'
 
 export async function RegiserApi(data) {
-
 
     let response = await axiosInstance.post(`/register/`, data)
 
@@ -87,8 +86,12 @@ export async function GetResumeAnalyzeApi(resume_id) {
 
 export async function FileUploadAPi(file) {
 
+    let headers = {
+        "Content-Type": "multipart/form-data",
+        'Authorization' : token
+    }
 
-    let response = await axiosInstance.post(`/resume/`, file)
+    let response = await axios.post(`${BASE_URL}/resume/`, file, {headers})
 
     return response
 

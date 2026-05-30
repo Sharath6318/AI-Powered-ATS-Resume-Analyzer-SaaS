@@ -26,7 +26,7 @@ function Register() {
             return;
         }
 
-        // console.log(userdetail);
+        console.log(userdetail);
 
         let response = await RegiserApi(userdetail)
 

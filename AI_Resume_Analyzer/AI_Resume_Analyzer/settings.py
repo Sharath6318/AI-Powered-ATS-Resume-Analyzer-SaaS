@@ -97,7 +97,7 @@ WSGI_APPLICATION = "AI_Resume_Analyzer.wsgi.application"
 
 #     "default": {
 #         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": 'ai_resume_analyzer_saas',
+#         "NAME": 'ai_resume_analyzer_saas_db',
 #         "USER": 'postgres',
 #         "PASSWORD": os.getenv("DB_PASSWORD"),
 #         "HOST": 'localhost',

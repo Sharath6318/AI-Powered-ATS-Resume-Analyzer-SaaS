@@ -52,17 +52,20 @@ function ResumeUplode() {
 
         formdata.append('file', file)
 
-        // uplodeFile(formdata)
+        // uplodeFile(formdata)  
 
-        let response = await FileUploadAPi(formdata)
-
+        console.log(formdata);
+        
+                
         try {
 
+            let response = await FileUploadAPi(formdata)
+            
             if (response.status >= 200 && response.status < 300) {
 
                 console.log("Success");
 
-                // console.log(response.data);
+                console.log(response.data);
 
                 window.location.reload()
 
@@ -70,7 +73,7 @@ function ResumeUplode() {
 
             }
 
-        } catch (error) {
+        } catch (error) {            
 
             console.log(error);
 
